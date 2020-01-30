@@ -1,26 +1,26 @@
 package org.launchcode.java.restaurant;
 
-import java.util.ArrayList;
-
 public class MenuItem {
 
-    private float price;
+    private double price;
     private String description;
-    private ArrayList category;
+    private String category;
     private boolean newItem;
 
-    public MenuItem (float price, String description, ArrayList category, boolean newItem){
+    public MenuItem (double price, String description, String category, boolean newItem){
         this.price = price;
         this.description = description;
         this.category = category;
         this.newItem = newItem;
     }
 
-    public float getPrice(){
-        return price;
+    public MenuItem(){
+
     }
 
-    public void setPrice(float price){
+    public double getPrice(){ return price; }
+
+    public void setPrice(double price){
         this.price = price;
     }
 
@@ -32,11 +32,11 @@ public class MenuItem {
         this.description = description;
     }
 
-    public ArrayList getCategory (){
+    public String getCategory (){
         return category;
     }
 
-    public void setCategory(ArrayList category){
+    public void setCategory(String category){
         this.category = category;
     }
 
