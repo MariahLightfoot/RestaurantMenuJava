@@ -17,11 +17,13 @@ public class Main {
         Menu menuOne = new Menu();
 
         menuOne.addMenuItem(soup);
+        menuOne.addMenuItem(soup);
         menuOne.addMenuItem(salad);
         menuOne.addMenuItem(steakDinner);
         menuOne.addMenuItem(porkChopDinner);
         menuOne.addMenuItem(lemonPie);
         menuOne.addMenuItem(chocolateMousse);
+
 
         menuOne.printMenu();
 

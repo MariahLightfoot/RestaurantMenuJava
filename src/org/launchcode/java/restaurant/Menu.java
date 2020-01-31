@@ -68,8 +68,11 @@ public class Menu {
 //    }
 
     public void addMenuItem(MenuItem newItem){
-
-        this.itemsInMenu.add(newItem);
+        if(!itemsInMenu.contains(newItem)){
+            itemsInMenu.add(newItem);
+        } else {
+            System.out.println("The menu already contains that item!");
+        }
     }
 
     public void removeMenuItem(MenuItem newItem){
