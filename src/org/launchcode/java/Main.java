@@ -25,6 +25,10 @@ public class Main {
 
         menuOne.printMenu();
 
+        menuOne.removeMenuItem(porkChopDinner);
+
+        menuOne.printMenu();
+
 //        menuOne.addMenuItem(salad);
 //        menuOne.addMenuItem(steakDinner);
 //        menuOne.addMenuItem(porkChopDinner);

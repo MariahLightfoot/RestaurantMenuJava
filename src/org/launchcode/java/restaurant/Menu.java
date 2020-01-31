@@ -72,6 +72,10 @@ public class Menu {
         this.itemsInMenu.add(newItem);
     }
 
+    public void removeMenuItem(MenuItem newItem){
+        this.itemsInMenu.remove(newItem);
+    }
+
     public void printMenu(){
 
         for(MenuItem item : itemsInMenu){
