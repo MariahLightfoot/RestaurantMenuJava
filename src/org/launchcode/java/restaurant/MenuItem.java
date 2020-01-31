@@ -48,6 +48,6 @@ public class MenuItem {
     public String toString(){
         return this.description + " $" + this.price + "\n" +
                 this.category + "\n" +
-                "New Item: " + this.newItem;
+                "New Item: " + this.newItem + "\n";
     }
 }
