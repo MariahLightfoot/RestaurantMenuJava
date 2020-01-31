@@ -76,6 +76,14 @@ public class Menu {
         this.itemsInMenu.remove(newItem);
     }
 
+    public void isMenuItemNew(MenuItem menuItem){
+        if(menuItem.getNewItem()){
+            System.out.println("Yes, the " + menuItem.getDescription() + " is new.");
+        } else {
+            System.out.println("No, the " + menuItem.getDescription() + " is not new.");
+        }
+    }
+
     public void printMenu(){
 
         for(MenuItem item : itemsInMenu){

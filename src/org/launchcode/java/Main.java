@@ -29,6 +29,9 @@ public class Main {
 
         menuOne.printMenu();
 
+        menuOne.isMenuItemNew(chocolateMousse);
+        menuOne.isMenuItemNew(steakDinner);
+
 //        menuOne.addMenuItem(salad);
 //        menuOne.addMenuItem(steakDinner);
 //        menuOne.addMenuItem(porkChopDinner);
