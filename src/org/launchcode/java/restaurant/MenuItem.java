@@ -14,10 +14,6 @@ public class MenuItem {
         this.newItem = newItem;
     }
 
-    public MenuItem(){
-
-    }
-
     public double getPrice(){ return price; }
 
     public void setPrice(double price){
@@ -48,4 +44,10 @@ public class MenuItem {
         this.newItem = newItem;
     }
 
+
+    public String toString(){
+        return this.description + " $" + this.price + "\n" +
+                this.category + "\n" +
+                "New Item: " + this.newItem;
+    }
 }

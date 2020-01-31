@@ -6,72 +6,77 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-    private String lastUpdate;
+    //private String lastUpdate;
     private ArrayList<MenuItem> itemsInMenu;
 
-    public Menu(String lastUpdate, ArrayList<MenuItem> itemsInMenu) {
-        this.lastUpdate = lastUpdate;
+    public Menu (ArrayList<MenuItem> itemsInMenu) {
+        //this.lastUpdate = lastUpdate;
         this.itemsInMenu = itemsInMenu;
     }
 
     public Menu (){
-
+        this.itemsInMenu = new ArrayList<MenuItem>();
     }
 
     //getters and setters
-    public String getLastUpdate(){
+//    public String getLastUpdate(){ return lastUpdate; }
+//
+//    public void setLastUpdate(String lastUpdate){ this.lastUpdate = lastUpdate; }
 
-        return lastUpdate;
-    }
+    public ArrayList<MenuItem> getItemsInMenu(){ return itemsInMenu; }
 
-    public void setLastUpdate(String lastUpdate){
+    public void setItemsInMenu(ArrayList<MenuItem> itemsInMenu){ this.itemsInMenu = itemsInMenu; }
 
-        this.lastUpdate = lastUpdate;
-    }
-
-    public ArrayList<MenuItem> getItemsInMenu(){
-
-        return itemsInMenu;
-    }
-
-    public void setgetItemsInMenu (ArrayList<MenuItem> itemsInMenu){
-
-        this.itemsInMenu = itemsInMenu;
-    }
 
     //instance methods
-    public void addItemToMenu (){
+//    public MenuItem createMenuItem (){
+//        //creating new menu
+//        Menu menuOne = new Menu();
+//
+//        MenuItem newItem = new MenuItem();
+//
+//        Scanner itemDescription = new Scanner(System.in);
+//        System.out.println("Name of new menu item?");
+//        String userSelectedItemDescription = itemDescription.nextLine();
+//        newItem.setDescription(userSelectedItemDescription);
+//
+//        Scanner itemPrice = new Scanner(System.in);
+//        System.out.println("Price?");
+//        double userSelectedItemPrice = itemPrice.nextDouble();
+//        newItem.setPrice(userSelectedItemPrice);
+//
+//        Scanner itemCategory = new Scanner(System.in);
+//        System.out.println("What category does the it belong to?");
+//        String userSelectedCategory = itemCategory.nextLine();
+//        newItem.setCategory(userSelectedCategory);
+//
+//        Scanner isItemNew = new Scanner(System.in);
+//        System.out.println("New item, true or false?");
+//        boolean userSelectedNewOption = isItemNew.nextBoolean();
+//        newItem.setNewItem(userSelectedNewOption);
+//
+//        //create new arraylist to store new item
+//        ArrayList<MenuItem> list = new ArrayList<MenuItem>();
+//
+//        //added item to arraylist
+//        list.add(newItem);
+//
+//        //add arraylist to menu instance
+//        menuOne.setItemsInMenu(list);
+//
+//        return newItem;
+//    }
 
-        //initializing new instance of menuItem class
-        MenuItem newItem = new MenuItem();
+    public void addMenuItem(MenuItem newItem){
 
-        Scanner itemDescription = new Scanner(System.in);
-        System.out.println("What is the name of the new menu item?");
-        String userSelectedItemDescription = itemDescription.nextLine();
-
-        newItem.setDescription(userSelectedItemDescription);
-
-
-        Scanner itemPrice = new Scanner(System.in);
-        System.out.println("What is the price?");
-        Double userSelectedItemPrice = itemPrice.nextDouble();
-
-        newItem.setPrice(userSelectedItemPrice);
-
-
-        Scanner itemCategory = new Scanner(System.in);
-        System.out.println("What category does the it belong to?");
-        String userSelectedCategory = itemCategory.nextLine();
-
-        newItem.setCategory(userSelectedCategory);
-
-
-        newItem.setNewItem(true);
+        this.itemsInMenu.add(newItem);
     }
 
-//    public void removeMenuItemFromMenu (MenuItem menuItemToRemove){
-//        for(item : menuItemsInMenu){
-//            if()
-//        }
-    //}
+    public void printMenu(){
+
+        for(MenuItem item : itemsInMenu){
+            System.out.println(item);
+        }
+    }
+
 }
